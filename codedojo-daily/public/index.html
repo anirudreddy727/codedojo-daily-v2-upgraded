@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151f"><meta name="description" content="Daily coding practice, team challenges and friendly competition.">
+  <title>CodeDojo Daily — DailyDebug Derby</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-mark">⌘</span><span>CodeDojo<span class="brand-muted"> Daily</span><small>DAILYDEBUG DERBY</small></span></a>
+    <div class="side-label">WORKSPACE</div>
+    <nav class="nav-list">
+      <button class="nav-item active" data-view="dashboard"><span>▦</span> Overview</button>
+      <button class="nav-item" data-view="challenges"><span>⌘</span> Challenges <em>25</em></button>
+      <button class="nav-item" data-view="teams"><span>♧</span> My squad</button>
+      <button class="nav-item" data-view="leaderboard"><span>↗</span> Leaderboard</button>
+      <button class="nav-item" data-view="activity"><span>▤</span> Activity & streaks</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="side-label">YOUR DAILY PACE</div>
+      <div class="streak-mini"><span class="flame">♨</span><div><strong id="sideStreak">0 day streak</strong><small>Keep your momentum going</small></div></div>
+      <div class="side-progress"><span id="sideProgress"></span></div>
+      <div class="side-foot"><span class="online-dot"></span> All systems operational</div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="breadcrumb">Workspace <span>/</span> <strong id="crumb">Overview</strong></div>
+      <div class="top-actions"><div class="date-chip" id="todayDate"></div><button class="avatar" id="profileButton" title="Edit display name">AR</button></div>
+    </header>
+    <section class="page" id="page-dashboard">
+      <div class="welcome-row"><div><div class="eyebrow"><span class="live-dot"></span> YOUR DAILY PRACTICE SPACE</div><h1>Make today <span>count.</span></h1><p class="muted">Small wins. Consistent reps. Better problem solvers.</p></div><button class="primary-btn" id="jumpChallenge">Solve today's challenge <span>↗</span></button></div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Problems solved</span><span class="stat-icon purple">⌘</span></div><strong id="statSolved">0</strong><small><span class="up">↗</span> Your practice, counted</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Current streak</span><span class="stat-icon orange">♨</span></div><strong id="statStreak">0 <i>days</i></strong><small>Consistency beats intensity</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Squad rank</span><span class="stat-icon blue">♧</span></div><strong id="statRank">—</strong><small id="statTeam">Join a squad to compete</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Acceptance rate</span><span class="stat-icon green">✓</span></div><strong id="statRate">—</strong><small>Based on your test runs</small></article>
+      </div>
+      <div class="section-heading"><div><div class="eyebrow">THE DAILY DROP</div><h2>Today's challenge</h2></div><button class="text-btn" data-goto="challenges">Browse all challenges ↗</button></div>
+      <article class="daily-card" id="dailyCard">
+        <div class="daily-copy"><div class="daily-meta"><span class="pill pill-purple">TODAY'S PICK</span><span class="difficulty easy" id="dailyDifficulty">EASY</span></div><h2 id="dailyTitle">Loading challenge…</h2><p id="dailyDescription"></p><div class="tag-row" id="dailyTags"></div><div class="daily-bottom"><span class="time-est">◷ 15–25 min</span><button class="primary-btn small" id="openDaily">Open challenge <span>→</span></button></div></div>
+        <div class="daily-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="code-window"><div class="window-dots"><i></i><i></i><i></i><span>solution.js</span></div><div class="code-lines"><b>01</b> <span class="code-purple">function</span> <span class="code-yellow">solve</span>(input) {<br><b>02</b> &nbsp; <span class="code-purple">const</span> result = <span class="code-green">think</span>();<br><b>03</b> &nbsp; <span class="code-purple">return</span> result;<br><b>04</b> }<br><b>05</b> <span class="code-comment">// keep going ✦</span></div></div><div class="art-star">✳</div></div>
+      </article>
+      <div class="lower-grid">
+        <section class="panel"><div class="panel-head"><div><div class="eyebrow">SQUAD SPOTLIGHT</div><h3>Leaderboard</h3></div><button class="text-btn" data-goto="leaderboard">View all ↗</button></div><div id="miniLeaderboard" class="leader-list"></div></section>
+        <section class="panel"><div class="panel-head"><div><div class="eyebrow">SHOW UP DAILY</div><h3>Your activity</h3></div><span class="muted tiny">Last 7 days</span></div><div class="mini-heat" id="miniHeat"></div><div class="heat-legend"><span>Less</span><i></i><i></i><i></i><i></i><span>More</span></div></section>
+      </div>
+    </section>
+    <section class="page hidden" id="page-challenges">
+      <div class="page-title"><div><div class="eyebrow">PRACTICE MAKES PROGRESS</div><h1>Challenge <span>library.</span></h1><p class="muted">Pick a problem, find your approach, and make it yours.</p></div><div class="challenge-count"><strong id="problemCount">28</strong><span>curated problems</span></div></div>
+      <div class="filter-bar"><div class="search-wrap"><span>⌕</span><input id="problemSearch" placeholder="Search problems or tags…" autocomplete="off"></div><select id="difficultyFilter"><option value="All">All difficulties</option><option>Easy</option><option>Medium</option><option>Hard</option></select><select id="tagFilter"><option value="All">All topics</option></select></div>
+      <div class="problem-grid" id="problemGrid"></div>
+    </section>
+    <section class="page hidden" id="page-teams">
+      <div class="page-title"><div><div class="eyebrow">BETTER TOGETHER</div><h1>Find your <span>squad.</span></h1><p class="muted">Build a 3–4 person crew and climb the leaderboard together.</p></div></div>
+      <div class="team-layout"><section class="panel team-create"><div class="panel-head"><div><div class="eyebrow">START SOMETHING</div><h3>Create a squad</h3></div><span class="team-emoji">♧</span></div><label>Squad name<input id="teamName" maxlength="28" placeholder="e.g. Binary Beasts"></label><label>Your display name<input id="captainName" maxlength="28" placeholder="Your name"></label><button class="primary-btn full" id="createTeam">Create team <span>→</span></button><p class="tiny muted">Squads can have up to 4 members. Your team is shared with this app instance.</p></section><section class="panel"><div class="panel-head"><div><div class="eyebrow">OPEN SQUADS</div><h3>Join a team</h3></div><span class="tiny muted">Find your people</span></div><div id="teamList" class="team-list"></div></section></div>
+      <section class="panel my-team-panel"><div class="panel-head"><div><div class="eyebrow">YOUR CREW</div><h3>My squad</h3></div><span class="pill pill-green" id="myTeamStatus">NOT IN A TEAM</span></div><div id="myTeamContent" class="empty-state">No squad selected yet. Create one or join an open squad above.</div></section>
+    </section>
+    <section class="page hidden" id="page-leaderboard">
+      <div class="page-title"><div><div class="eyebrow">FRIENDLY COMPETITION</div><h1>Squad <span>standings.</span></h1><p class="muted">A little competition makes the practice more fun.</p></div><div class="season-chip">✳ DAILY DERBY · SEASON 01</div></div>
+      <section class="panel leaderboard-panel"><div class="leaderboard-header"><span>RANK / SQUAD</span><span>MEMBERS</span><span>SOLVES</span><span>POINTS</span></div><div id="fullLeaderboard"></div></section>
+      <p class="tiny muted scoring-note">Scoring preview: accepted first solves earn 100 points. Team totals update as members submit accepted solutions. Demo data is local to this project.</p>
+    </section>
+    <section class="page hidden" id="page-activity">
+      <div class="page-title"><div><div class="eyebrow">CONSISTENCY IS A SUPERPOWER</div><h1>Your <span>activity.</span></h1><p class="muted">Every session counts. Keep your streak alive.</p></div></div>
+      <div class="activity-stats"><div class="panel"><span class="muted">Current streak</span><strong id="activityStreak">0 days</strong></div><div class="panel"><span class="muted">Total accepted</span><strong id="activitySolved">0</strong></div><div class="panel"><span class="muted">Practice days</span><strong id="activityDays">0</strong></div></div>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">YOUR CONTRIBUTIONS</div><h3>Consistency calendar</h3></div><span class="tiny muted">Last 12 weeks</span></div><div id="activityHeat" class="activity-heat"></div><div class="heat-legend"><span>Less</span><i></i><i></i><i></i><i></i><span>More</span></div></section>
+      <section class="panel history-panel"><div class="panel-head"><div><div class="eyebrow">RECENT WORK</div><h3>Submission history</h3></div></div><div id="submissionHistory"></div></section>
+    </section>
+    <section class="page hidden" id="page-editor">
+      <button class="back-link" id="backToChallenges">← Back to challenges</button>
+      <div class="editor-heading"><div><div class="daily-meta"><span class="pill pill-purple" id="editorId">CHALLENGE 01</span><span class="difficulty easy" id="editorDifficulty">EASY</span></div><h1 id="editorTitle">Two Sum</h1><div class="tag-row" id="editorTags"></div></div><div class="editor-actions"><select id="languageSelect"><option value="javascript">JavaScript</option><option value="python">Python 3</option></select><button class="outline-btn" id="resetCode">Reset code</button></div></div>
+      <div class="workspace-grid"><section class="panel problem-panel"><div class="tabs"><button class="tab active" data-tab="description">Description</button><button class="tab" data-tab="hints">Hints</button></div><div id="tab-description" class="tab-content"><p id="editorDescription"></p><h4>Example</h4><div class="example-box"><span>Input</span><code id="exampleInput"></code><span>Output</span><code id="exampleOutput"></code></div><h4>Constraints</h4><p class="muted" id="editorConstraints"></p><h4>Test cases</h4><div id="testCasePreview"></div></div><div id="tab-hints" class="tab-content hidden"><div class="hint-card"><span class="hint-icon">✳</span><div><strong>A nudge, not the answer.</strong><p id="hintText"></p></div></div><p class="tiny muted">Try to reason it out before looking up a complete solution. That's where the learning happens.</p></div></section>
+      <section class="panel code-panel"><div class="editor-top"><div><span class="editor-dot"></span><strong>Code workspace</strong><span class="tiny muted" id="editorFile">solution.js</span></div><span class="tiny muted">⌘ + Enter to run</span></div><textarea id="codeEditor" spellcheck="false" aria-label="Code editor"></textarea><div class="run-bar"><span class="tiny muted" id="runMessage">Ready when you are.</span><div><button class="outline-btn" id="runTests">▶ Run tests</button><button class="primary-btn small" id="submitSolution">Submit solution ↗</button></div></div><div class="results" id="testResults"><div class="result-empty">Run your code to see the test results here.</div></div></section></div>
+    </section>
+    <footer>Built for curious minds <span>✳</span> CodeDojo Daily · DailyDebug Derby</footer>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-backdrop hidden" id="nameModal"><div class="modal"><button class="modal-close" id="closeName">×</button><div class="eyebrow">YOUR PROFILE</div><h2>What should we call you?</h2><p class="muted">Choose a display name for your practice profile.</p><input id="displayNameInput" maxlength="28" placeholder="Your display name"><button class="primary-btn full" id="saveName">Save profile</button></div></div>
+<script src="/app.js"></script>
+</body></html>

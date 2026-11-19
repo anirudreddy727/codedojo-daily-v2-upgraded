@@ -1,0 +1,14 @@
+{
+  "name": "codedojo-daily",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Daily coding challenges and team competition platform with hardened API and automated tests",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "check": "node --check server.js && node --check public/app.js && node --check public/runner.js && node --test"
+  },
+  "engines": { "node": ">=18" }
+}

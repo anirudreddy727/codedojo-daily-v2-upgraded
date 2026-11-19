@@ -1,0 +1,1978 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "tags": [
+      "Arrays",
+      "Hash Maps"
+    ],
+    "description": "Return the indices of two numbers that add up to the target.",
+    "exampleInput": "nums = [2, 7, 11, 15], target = 9",
+    "exampleOutput": "[0, 1]",
+    "hint": "Find the complement of each number and remember previously seen values.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "target": 9
+        },
+        "expected": "[0,1]"
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            2,
+            4
+          ],
+          "target": 6
+        },
+        "expected": "[1,2]"
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            3
+          ],
+          "target": 6
+        },
+        "expected": "[0,1]"
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            -2,
+            -3,
+            -4
+          ],
+          "target": -6
+        },
+        "expected": "[1,3]"
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            4,
+            3,
+            0
+          ],
+          "target": 0
+        },
+        "expected": "[0,3]"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "tags": [
+      "Strings",
+      "Two Pointers"
+    ],
+    "description": "Return true if a string is a palindrome after ignoring punctuation, spaces, and letter case.",
+    "exampleInput": "s = \"A man, a plan, a canal: Panama\"",
+    "exampleOutput": "true",
+    "hint": "Normalize the string, then compare characters from both ends.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "s": "A man, a plan, a canal: Panama"
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "race a car"
+        },
+        "expected": "false"
+      },
+      {
+        "input": {
+          "s": " "
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "No 'x' in Nixon"
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "hello"
+        },
+        "expected": "false"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Maximum Subarray",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Dynamic Programming"
+    ],
+    "description": "Find the largest sum of any contiguous subarray.",
+    "exampleInput": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+    "exampleOutput": "6",
+    "hint": "At each position, decide whether to extend the previous subarray or start fresh.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            -2,
+            1,
+            -3,
+            4,
+            -1,
+            2,
+            1,
+            -5,
+            4
+          ]
+        },
+        "expected": "6"
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "nums": [
+            5,
+            4,
+            -1,
+            7,
+            8
+          ]
+        },
+        "expected": "23"
+      },
+      {
+        "input": {
+          "nums": [
+            -3,
+            -2,
+            -5
+          ]
+        },
+        "expected": "-2"
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0,
+            0
+          ]
+        },
+        "expected": "0"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "tags": [
+      "Arrays",
+      "Hash Maps"
+    ],
+    "description": "Return true if any value appears at least twice.",
+    "exampleInput": "nums = [1, 2, 3, 1]",
+    "exampleOutput": "true",
+    "hint": "A set makes it easy to detect a value seen before.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": "false"
+      },
+      {
+        "input": {
+          "nums": []
+        },
+        "expected": "false"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            1
+          ]
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expected": "true"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "tags": [
+      "Strings",
+      "Hash Maps"
+    ],
+    "description": "Determine whether two strings contain the same characters with the same frequencies.",
+    "exampleInput": "s = \"anagram\", t = \"nagaram\"",
+    "exampleOutput": "true",
+    "hint": "Count character frequencies or sort both strings.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "s": "anagram",
+          "t": "nagaram"
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "rat",
+          "t": "car"
+        },
+        "expected": "false"
+      },
+      {
+        "input": {
+          "s": "",
+          "t": ""
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "aacc",
+          "t": "ccac"
+        },
+        "expected": "false"
+      },
+      {
+        "input": {
+          "s": "listen",
+          "t": "silent"
+        },
+        "expected": "true"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "tags": [
+      "Arrays",
+      "Greedy"
+    ],
+    "description": "Choose one day to buy and a later day to sell to maximize profit. Return the maximum profit.",
+    "exampleInput": "prices = [7, 1, 5, 3, 6, 4]",
+    "exampleOutput": "5",
+    "hint": "Track the lowest price so far and the best profit.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "prices": [
+            7,
+            1,
+            5,
+            3,
+            6,
+            4
+          ]
+        },
+        "expected": "5"
+      },
+      {
+        "input": {
+          "prices": [
+            7,
+            6,
+            4,
+            3,
+            1
+          ]
+        },
+        "expected": "0"
+      },
+      {
+        "input": {
+          "prices": [
+            1,
+            2
+          ]
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "prices": [
+            2,
+            4,
+            1
+          ]
+        },
+        "expected": "2"
+      },
+      {
+        "input": {
+          "prices": [
+            3,
+            3,
+            3
+          ]
+        },
+        "expected": "0"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Product of Array Except Self",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Prefix Sum"
+    ],
+    "description": "Return an array where each position contains the product of all other elements. Do not use division.",
+    "exampleInput": "nums = [1, 2, 3, 4]",
+    "exampleOutput": "[24,12,8,6]",
+    "hint": "Build prefix products, then multiply by a running suffix product.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": "[24,12,8,6]"
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            1,
+            0,
+            -3,
+            3
+          ]
+        },
+        "expected": "[0,0,9,0,0]"
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            3
+          ]
+        },
+        "expected": "[3,2]"
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0
+          ]
+        },
+        "expected": "[0,0]"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            0
+          ]
+        },
+        "expected": "[0,1]"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Sorting"
+    ],
+    "description": "Merge all overlapping intervals and return the merged intervals sorted by start time.",
+    "exampleInput": "intervals = [[1,3],[2,6],[8,10],[15,18]]",
+    "exampleOutput": "[[1,6],[8,10],[15,18]]",
+    "hint": "Sort by start, then merge an interval into the previous one when they overlap.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              15,
+              18
+            ]
+          ]
+        },
+        "expected": "[[1,6],[8,10],[15,18]]"
+      },
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "expected": "[[1,5]]"
+      },
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        "expected": "[[0,4]]"
+      },
+      {
+        "input": {
+          "intervals": []
+        },
+        "expected": "[]"
+      },
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        "expected": "[[1,4]]"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "tags": [
+      "Arrays",
+      "Binary Search"
+    ],
+    "description": "Return the index of target in a sorted array, or -1 if it is absent.",
+    "exampleInput": "nums = [-1, 0, 3, 5, 9, 12], target = 9",
+    "exampleOutput": "4",
+    "hint": "Repeatedly halve the search range using left, right, and middle pointers.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          "target": 9
+        },
+        "expected": "4"
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          "target": 2
+        },
+        "expected": "-1"
+      },
+      {
+        "input": {
+          "nums": [],
+          "target": 5
+        },
+        "expected": "-1"
+      },
+      {
+        "input": {
+          "nums": [
+            5
+          ],
+          "target": 5
+        },
+        "expected": "0"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "target": 1
+        },
+        "expected": "0"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Move Zeroes",
+    "difficulty": "Easy",
+    "tags": [
+      "Arrays",
+      "Two Pointers"
+    ],
+    "description": "Move all zeroes to the end while preserving the relative order of non-zero elements. Return the modified array.",
+    "exampleInput": "nums = [0, 1, 0, 3, 12]",
+    "exampleOutput": "[1,3,12,0,0]",
+    "hint": "Write non-zero values forward, then fill the remaining positions with zeroes.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            0,
+            1,
+            0,
+            3,
+            12
+          ]
+        },
+        "expected": "[1,3,12,0,0]"
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "expected": "[0]"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3
+          ]
+        },
+        "expected": "[1,2,3]"
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0,
+            1
+          ]
+        },
+        "expected": "[1,0,0]"
+      },
+      {
+        "input": {
+          "nums": [
+            4,
+            0,
+            5,
+            0,
+            0,
+            2
+          ]
+        },
+        "expected": "[4,5,2,0,0,0]"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "tags": [
+      "Dynamic Programming"
+    ],
+    "description": "You can climb 1 or 2 steps at a time. Return the number of distinct ways to reach step n.",
+    "exampleInput": "n = 5",
+    "exampleOutput": "8",
+    "hint": "The number of ways follows the Fibonacci recurrence.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "n": 2
+        },
+        "expected": "2"
+      },
+      {
+        "input": {
+          "n": 3
+        },
+        "expected": "3"
+      },
+      {
+        "input": {
+          "n": 5
+        },
+        "expected": "8"
+      },
+      {
+        "input": {
+          "n": 1
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "n": 10
+        },
+        "expected": "89"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "tags": [
+      "Strings",
+      "Sliding Window"
+    ],
+    "description": "Return the length of the longest substring without repeating characters.",
+    "exampleInput": "s = \"abcabcbb\"",
+    "exampleOutput": "3",
+    "hint": "Use a sliding window and move its left edge past repeated characters.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "s": "abcabcbb"
+        },
+        "expected": "3"
+      },
+      {
+        "input": {
+          "s": "bbbbb"
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "s": "pwwkew"
+        },
+        "expected": "3"
+      },
+      {
+        "input": {
+          "s": ""
+        },
+        "expected": "0"
+      },
+      {
+        "input": {
+          "s": "dvdf"
+        },
+        "expected": "3"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "tags": [
+      "Strings",
+      "Hash Maps"
+    ],
+    "description": "Group words that are anagrams of one another. Group order does not matter.",
+    "exampleInput": "strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]",
+    "exampleOutput": "[[\"eat\",\"tea\",\"ate\"],[\"tan\",\"nat\"],[\"bat\"]]",
+    "hint": "Use a canonical sorted-character key for each word.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "strs": [
+            "eat",
+            "tea",
+            "tan",
+            "ate",
+            "nat",
+            "bat"
+          ]
+        },
+        "expected": "groups"
+      },
+      {
+        "input": {
+          "strs": [
+            ""
+          ]
+        },
+        "expected": "groups"
+      },
+      {
+        "input": {
+          "strs": [
+            "a"
+          ]
+        },
+        "expected": "groups"
+      },
+      {
+        "input": {
+          "strs": [
+            "ab",
+            "ba",
+            "abc"
+          ]
+        },
+        "expected": "groups"
+      },
+      {
+        "input": {
+          "strs": []
+        },
+        "expected": "groups"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Three Sum",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Two Pointers"
+    ],
+    "description": "Return unique triplets whose values sum to zero.",
+    "exampleInput": "nums = [-1, 0, 1, 2, -1, -4]",
+    "exampleOutput": "[[-1,-1,2],[-1,0,1]]",
+    "hint": "Sort the array, fix one value, then use two pointers while skipping duplicates.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            1,
+            2,
+            -1,
+            -4
+          ]
+        },
+        "expected": "triplets"
+      },
+      {
+        "input": {
+          "nums": []
+        },
+        "expected": "[]"
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "expected": "[]"
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0,
+            0
+          ]
+        },
+        "expected": "[[0,0,0]]"
+      },
+      {
+        "input": {
+          "nums": [
+            -2,
+            0,
+            1,
+            1,
+            2
+          ]
+        },
+        "expected": "triplets"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Top K Frequent Elements",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Hash Maps"
+    ],
+    "description": "Return the k most frequent values. Any order is accepted.",
+    "exampleInput": "nums = [1,1,1,2,2,3], k = 2",
+    "exampleOutput": "[1,2]",
+    "hint": "Count frequencies, then select the k largest counts.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            3
+          ],
+          "k": 2
+        },
+        "expected": "topk"
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "k": 1
+        },
+        "expected": "[1]"
+      },
+      {
+        "input": {
+          "nums": [
+            4,
+            4,
+            4,
+            6,
+            6,
+            7
+          ],
+          "k": 1
+        },
+        "expected": "[4]"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          "k": 2
+        },
+        "expected": "topk"
+      },
+      {
+        "input": {
+          "nums": [
+            5,
+            5,
+            6
+          ],
+          "k": 2
+        },
+        "expected": "topk"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Container With Most Water",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Two Pointers"
+    ],
+    "description": "Find two vertical lines that together with the x-axis contain the most water.",
+    "exampleInput": "height = [1,8,6,2,5,4,8,3,7]",
+    "exampleOutput": "49",
+    "hint": "Start at both ends and move the pointer at the shorter line inward.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "height": [
+            1,
+            8,
+            6,
+            2,
+            5,
+            4,
+            8,
+            3,
+            7
+          ]
+        },
+        "expected": "49"
+      },
+      {
+        "input": {
+          "height": [
+            1,
+            1
+          ]
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "height": [
+            4,
+            3,
+            2,
+            1,
+            4
+          ]
+        },
+        "expected": "16"
+      },
+      {
+        "input": {
+          "height": [
+            1,
+            2,
+            1
+          ]
+        },
+        "expected": "2"
+      },
+      {
+        "input": {
+          "height": [
+            2,
+            3,
+            4,
+            5,
+            18,
+            17,
+            6
+          ]
+        },
+        "expected": "17"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "tags": [
+      "Graphs",
+      "DFS"
+    ],
+    "description": "Count connected groups of '1' cells in a grid. Adjacent means up, down, left, or right.",
+    "exampleInput": "grid = [[\"1\",\"1\",\"0\"],[\"1\",\"0\",\"0\"],[\"0\",\"0\",\"1\"]]",
+    "exampleOutput": "2",
+    "hint": "Visit each land cell once using depth-first search or breadth-first search.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "grid": [
+            [
+              "1",
+              "1",
+              "0"
+            ],
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        "expected": "2"
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "1"
+            ]
+          ]
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "expected": "0"
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              "1"
+            ]
+          ]
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              "1",
+              "0",
+              "1"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ]
+        },
+        "expected": "3"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "tags": [
+      "Dynamic Programming"
+    ],
+    "description": "Return the fewest coins needed to make amount, or -1 if it cannot be made.",
+    "exampleInput": "coins = [1, 2, 5], amount = 11",
+    "exampleOutput": "3",
+    "hint": "Use dynamic programming where dp[x] is the minimum coins needed for x.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "coins": [
+            1,
+            2,
+            5
+          ],
+          "amount": 11
+        },
+        "expected": "3"
+      },
+      {
+        "input": {
+          "coins": [
+            2
+          ],
+          "amount": 3
+        },
+        "expected": "-1"
+      },
+      {
+        "input": {
+          "coins": [
+            1
+          ],
+          "amount": 0
+        },
+        "expected": "0"
+      },
+      {
+        "input": {
+          "coins": [
+            1,
+            3,
+            4
+          ],
+          "amount": 6
+        },
+        "expected": "2"
+      },
+      {
+        "input": {
+          "coins": [
+            2,
+            5,
+            10
+          ],
+          "amount": 1
+        },
+        "expected": "-1"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Implement Queue Using Stacks",
+    "difficulty": "Easy",
+    "tags": [
+      "Stacks",
+      "Design"
+    ],
+    "description": "Design a queue with enqueue, dequeue, peek, and empty operations. For this challenge, process the operation list and return outputs for query operations.",
+    "exampleInput": "operations = [[\"push\",1],[\"push\",2],[\"peek\"],[\"pop\"],[\"empty\"]]",
+    "exampleOutput": "[1,1,false]",
+    "hint": "Use two stacks: one for incoming values and one for outgoing values.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              1
+            ],
+            [
+              "push",
+              2
+            ],
+            [
+              "peek"
+            ],
+            [
+              "pop"
+            ],
+            [
+              "empty"
+            ]
+          ]
+        },
+        "expected": "[1,1,false]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              4
+            ],
+            [
+              "pop"
+            ],
+            [
+              "empty"
+            ]
+          ]
+        },
+        "expected": "[4,true]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "empty"
+            ]
+          ]
+        },
+        "expected": "[true]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              7
+            ],
+            [
+              "peek"
+            ]
+          ]
+        },
+        "expected": "[7]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              1
+            ],
+            [
+              "push",
+              2
+            ],
+            [
+              "pop"
+            ],
+            [
+              "pop"
+            ]
+          ]
+        },
+        "expected": "[1,2]"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Rotate Array",
+    "difficulty": "Easy",
+    "tags": [
+      "Arrays",
+      "Two Pointers"
+    ],
+    "description": "Rotate an array to the right by k steps and return the result.",
+    "exampleInput": "nums = [1,2,3,4,5,6,7], k = 3",
+    "exampleOutput": "[5,6,7,1,2,3,4]",
+    "hint": "Normalize k by array length and use slicing or reversal.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "k": 3
+        },
+        "expected": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            -100,
+            3,
+            99
+          ],
+          "k": 2
+        },
+        "expected": "[3,99,-1,-100]"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2
+          ],
+          "k": 0
+        },
+        "expected": "[1,2]"
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "k": 10
+        },
+        "expected": "[1]"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3
+          ],
+          "k": 4
+        },
+        "expected": "[3,1,2]"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Majority Element",
+    "difficulty": "Easy",
+    "tags": [
+      "Arrays",
+      "Hash Maps"
+    ],
+    "description": "Return the element that appears more than n/2 times. Such an element is guaranteed to exist.",
+    "exampleInput": "nums = [2,2,1,1,1,2,2]",
+    "exampleOutput": "2",
+    "hint": "The Boyer-Moore voting algorithm finds the majority in linear time.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "expected": "2"
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            3,
+            4
+          ]
+        },
+        "expected": "3"
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "nums": [
+            6,
+            5,
+            6
+          ]
+        },
+        "expected": "6"
+      },
+      {
+        "input": {
+          "nums": [
+            9,
+            9,
+            9,
+            2,
+            3
+          ]
+        },
+        "expected": "9"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Longest Common Prefix",
+    "difficulty": "Easy",
+    "tags": [
+      "Strings"
+    ],
+    "description": "Return the longest common prefix shared by all strings. Return an empty string if none exists.",
+    "exampleInput": "strs = [\"flower\",\"flow\",\"flight\"]",
+    "exampleOutput": "\"fl\"",
+    "hint": "Compare characters across the words until one differs.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "strs": [
+            "flower",
+            "flow",
+            "flight"
+          ]
+        },
+        "expected": "\"fl\""
+      },
+      {
+        "input": {
+          "strs": [
+            "dog",
+            "racecar",
+            "car"
+          ]
+        },
+        "expected": "\"\""
+      },
+      {
+        "input": {
+          "strs": [
+            "alone"
+          ]
+        },
+        "expected": "\"alone\""
+      },
+      {
+        "input": {
+          "strs": [
+            "",
+            "b"
+          ]
+        },
+        "expected": "\"\""
+      },
+      {
+        "input": {
+          "strs": [
+            "interview",
+            "internet",
+            "internal"
+          ]
+        },
+        "expected": "\"inter\""
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Find First and Last Position",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Binary Search"
+    ],
+    "description": "Find the starting and ending index of target in a sorted array. Return [-1,-1] if absent.",
+    "exampleInput": "nums = [5,7,7,8,8,10], target = 8",
+    "exampleOutput": "[3,4]",
+    "hint": "Use two binary searches: one for the first occurrence and one for the last.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            5,
+            7,
+            7,
+            8,
+            8,
+            10
+          ],
+          "target": 8
+        },
+        "expected": "[3,4]"
+      },
+      {
+        "input": {
+          "nums": [
+            5,
+            7,
+            7,
+            8,
+            8,
+            10
+          ],
+          "target": 6
+        },
+        "expected": "[-1,-1]"
+      },
+      {
+        "input": {
+          "nums": [],
+          "target": 0
+        },
+        "expected": "[-1,-1]"
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "target": 1
+        },
+        "expected": "[0,0]"
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            2
+          ],
+          "target": 2
+        },
+        "expected": "[0,1]"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "House Robber",
+    "difficulty": "Medium",
+    "tags": [
+      "Dynamic Programming"
+    ],
+    "description": "Given non-negative values in a row of houses, maximize the amount robbed without robbing adjacent houses.",
+    "exampleInput": "nums = [2,7,9,3,1]",
+    "exampleOutput": "12",
+    "hint": "At each house, choose between skipping it or adding its value to the best from two houses back.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "nums": [
+            2,
+            7,
+            9,
+            3,
+            1
+          ]
+        },
+        "expected": "12"
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "expected": "4"
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        "expected": "4"
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "expected": "0"
+      },
+      {
+        "input": {
+          "nums": [
+            5,
+            5,
+            10,
+            100,
+            10,
+            5
+          ]
+        },
+        "expected": "105"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Daily Temperatures",
+    "difficulty": "Medium",
+    "tags": [
+      "Arrays",
+      "Stack"
+    ],
+    "description": "For each day, return how many days until a warmer temperature. Use 0 if none exists.",
+    "exampleInput": "temperatures = [73,74,75,71,69,72,76,73]",
+    "exampleOutput": "[1,1,4,2,1,1,0,0]",
+    "hint": "A monotonic decreasing stack stores indices waiting for a warmer day.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "temperatures": [
+            73,
+            74,
+            75,
+            71,
+            69,
+            72,
+            76,
+            73
+          ]
+        },
+        "expected": "[1,1,4,2,1,1,0,0]"
+      },
+      {
+        "input": {
+          "temperatures": [
+            30,
+            40,
+            50,
+            60
+          ]
+        },
+        "expected": "[1,1,1,0]"
+      },
+      {
+        "input": {
+          "temperatures": [
+            30,
+            60,
+            90
+          ]
+        },
+        "expected": "[1,1,0]"
+      },
+      {
+        "input": {
+          "temperatures": [
+            50
+          ]
+        },
+        "expected": "[0]"
+      },
+      {
+        "input": {
+          "temperatures": [
+            70,
+            70,
+            70
+          ]
+        },
+        "expected": "[0,0,0]"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Word Break",
+    "difficulty": "Medium",
+    "tags": [
+      "Dynamic Programming",
+      "Strings"
+    ],
+    "description": "Return true if the string can be segmented into one or more dictionary words.",
+    "exampleInput": "s = \"leetcode\", wordDict = [\"leet\",\"code\"]",
+    "exampleOutput": "true",
+    "hint": "Let dp[i] indicate whether the prefix ending at i can be segmented.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "s": "leetcode",
+          "wordDict": [
+            "leet",
+            "code"
+          ]
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "applepenapple",
+          "wordDict": [
+            "apple",
+            "pen"
+          ]
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "catsandog",
+          "wordDict": [
+            "cats",
+            "dog",
+            "sand",
+            "and",
+            "cat"
+          ]
+        },
+        "expected": "false"
+      },
+      {
+        "input": {
+          "s": "",
+          "wordDict": [
+            "a"
+          ]
+        },
+        "expected": "true"
+      },
+      {
+        "input": {
+          "s": "cars",
+          "wordDict": [
+            "car",
+            "ca",
+            "rs"
+          ]
+        },
+        "expected": "true"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Min Stack",
+    "difficulty": "Medium",
+    "tags": [
+      "Stacks",
+      "Design"
+    ],
+    "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. Process operations and return query outputs.",
+    "exampleInput": "operations = [[\"push\",-2],[\"push\",0],[\"push\",-3],[\"getMin\"],[\"pop\"],[\"top\"],[\"getMin\"]]",
+    "exampleOutput": "[-3,0,-2]",
+    "hint": "Store the minimum so far alongside each pushed value, or maintain a second stack.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              -2
+            ],
+            [
+              "push",
+              0
+            ],
+            [
+              "push",
+              -3
+            ],
+            [
+              "getMin"
+            ],
+            [
+              "pop"
+            ],
+            [
+              "top"
+            ],
+            [
+              "getMin"
+            ]
+          ]
+        },
+        "expected": "[-3,0,-2]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              1
+            ],
+            [
+              "getMin"
+            ]
+          ]
+        },
+        "expected": "[1]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              2
+            ],
+            [
+              "push",
+              1
+            ],
+            [
+              "getMin"
+            ],
+            [
+              "pop"
+            ],
+            [
+              "getMin"
+            ]
+          ]
+        },
+        "expected": "[1,2]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              5
+            ],
+            [
+              "top"
+            ]
+          ]
+        },
+        "expected": "[5]"
+      },
+      {
+        "input": {
+          "operations": [
+            [
+              "push",
+              3
+            ],
+            [
+              "push",
+              3
+            ],
+            [
+              "getMin"
+            ],
+            [
+              "pop"
+            ],
+            [
+              "getMin"
+            ]
+          ]
+        },
+        "expected": "[3,3]"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "tags": [
+      "Trees",
+      "DFS"
+    ],
+    "description": "Return the maximum depth of a binary tree represented as a level-order array, where null means no node.",
+    "exampleInput": "root = [3,9,20,null,null,15,7]",
+    "exampleOutput": "3",
+    "hint": "The depth is one plus the larger depth of the left and right subtrees.",
+    "constraints": "Use an efficient approach. Handle empty inputs and edge cases. Return the requested value in the format shown.",
+    "tests": [
+      {
+        "input": {
+          "root": [
+            3,
+            9,
+            20,
+            null,
+            null,
+            15,
+            7
+          ]
+        },
+        "expected": "3"
+      },
+      {
+        "input": {
+          "root": [
+            1,
+            null,
+            2
+          ]
+        },
+        "expected": "2"
+      },
+      {
+        "input": {
+          "root": []
+        },
+        "expected": "0"
+      },
+      {
+        "input": {
+          "root": [
+            1
+          ]
+        },
+        "expected": "1"
+      },
+      {
+        "input": {
+          "root": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "expected": "3"
+      }
+    ]
+  }
+]
